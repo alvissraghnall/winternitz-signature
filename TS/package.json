@@ -1,0 +1,20 @@
+{
+  "name": "winternitz-signature",
+  "version": "1.0.0",
+  "description": "An Implementation of the Winternitz Hash based signature scheme in Typescript.",
+  "main": "Winternitz.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon Winternitz.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/alvissraghnall/winternitz-signature.git"
+  },
+  "author": "Álviss Raghnall",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alvissraghnall/winternitz-signature/issues"
+  },
+  "homepage": "https://github.com/alvissraghnall/winternitz-signature#readme"
+}
