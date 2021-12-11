@@ -6,7 +6,7 @@ public class Son {
  public static HashMap main (){
    HashMap<String, String> x = new HashMap<>();
    
-   x.push("ga", "hah");
+   x.add("ga", "hah");
    
    return x;
  }

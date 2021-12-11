@@ -1,0 +1,45 @@
+Arguments: 
+  /data/data/com.termux/files/usr/bin/node /data/data/com.termux/files/home/.yarn/bin/yarn.js add --dev @types/node@12.13.0
+
+PATH: 
+  /data/data/com.termux/files/home/.yarn/bin:/data/data/com.termux/files/home/.config/yarn/global/node_modules/.bin:/data/data/com.termux/files/usr/lib/bin:/data/data/com.termux/files/usr/bin:/data/data/com.termux/files/usr/bin/applets
+
+Yarn version: 
+  1.22.15
+
+Node version: 
+  12.13.0
+
+Platform: 
+  android arm64
+
+Trace: 
+  Error: EPERM: operation not permitted, copyfile '/data/data/com.termux/files/home/.cache/yarn/v6/npm-@types-node-12.19.0-a0f841c195bdbe0b5070da9278b3e22189e8c8f6-integrity/node_modules/@types/node/LICENSE' -> '/storage/emulated/0/Android/data/io.spck/files/winternitz-signature/TS/node_modules/@types/node/LICENSE'
+
+npm manifest: 
+  {
+    "name": "winternitz-signature",
+    "version": "1.0.0",
+    "description": "An Implementation of the Winternitz Hash based signature scheme in Typescript.",
+    "main": "WinternitzSignature.ts",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "dev": "nodemon Winternitz.ts"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+ssh://git@github.com/alvissraghnall/winternitz-signature.git"
+    },
+    "author": "Álviss Raghnall",
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/alvissraghnall/winternitz-signature/issues"
+    },
+    "homepage": "https://github.com/alvissraghnall/winternitz-signature#readme"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
