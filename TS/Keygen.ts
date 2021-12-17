@@ -13,19 +13,30 @@ class Keygen {
     return privKey;
   }
 
-  returnKeys(algorithm: string): {privKey: Uint8Array[], pubKey: Buffer[]} {
+  private hash256(data: Uint8Array) {
+    const hash = (data: Uint8Array) => createHash("sha256").update(data).digest();
+    let currHash: Buffer | Uint8Array = data;
+    let i: number = 0;
+    while (i < 256) {
+      currHash = hash(currHash);
+      //console.log(i, data, currHash);
+      i++;
+    }
+    return currHash as Buffer;
+  }
+
+  returnKeys(): { privKey: Uint8Array[], pubKey: Buffer[] } {
     return {
       privKey: this.genPrivate(),
-      pubKey: this.genPublic(algorithm)
+      pubKey: this.genPublic()
     }
   }
 
-  private genPublic(algorithm: string): Buffer[] {
+  private genPublic(): Buffer[] {
     const privKey = this.genPrivate();
-    const hash = (alg: string, data: Uint8Array) => createHash(alg).update(data).digest();
     const pubKey: Buffer[] = new Array(32);
-    for(let i in privKey){
-      pubKey[i] = hash(algorithm, privKey[i]);
+    for (let i in privKey) {
+      pubKey[i] = this.hash256(privKey[i]);
     }
     return pubKey;
   }
@@ -33,7 +44,9 @@ class Keygen {
 }
 
 const oop = new Keygen();
-console.log(oop.returnKeys("sha256").pubKey[5].toString("hex"));
-
+//console.log(oop.returnKeys("sha256").pubKey[5].toString("hex"));
+//console.log(oop.hash256());
+//console.log(oop.genPublic());
+//console.log(oop.hash256("hello").toString("hex"));
 
 export default Keygen;
