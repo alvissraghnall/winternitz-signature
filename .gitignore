@@ -2,3 +2,4 @@ node_modules
 build
 libs
 dist
+yarn-error.log

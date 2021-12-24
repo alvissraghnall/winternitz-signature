@@ -21,6 +21,19 @@ class SigGen {
     return mainDig;
   }
   
+  byte[][] signature(String[] bytesArray){
+    MessageDigest md;
+    String curr;
+    byte hashTimes;
+    for(byte i = 0; i < bytesArray.length; ++i){
+      curr = bytesArray[i];
+      hashTimes = 256 - Integer.parseInt(bytesArray[i], 2);
+      for(byte j = 0; j < hashTimes; j++){
+        
+      }
+    }
+  }
+  
   String[] pubmainDig() throws NoSuchAlgorithmException {
     return this.digestToBytes(this.messageDigest("God."));
   }
