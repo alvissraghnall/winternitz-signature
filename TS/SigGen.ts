@@ -20,7 +20,7 @@ class SigGen {
     parseInt(i, 16).toString(2).padStart(4, '0')).join('');
   }
   
-  /*private */destructureBin(bin: string): string[] {
+  /*private */static destructureBin(bin: string): string[] {
     let binArray: string[] = Array(32);
     for(let i = 0; i < bin.length; ++i){
       let curr;
