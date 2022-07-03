@@ -31,8 +31,8 @@ class SigGen {
     return binArray;
   }
   
-  public signature(binArray: string[]): string[] {
-    const hash = (data: string) => createHash("sha256").update(data).digest("hex");
+  public signature(binArray: string[]): Buffer[] {
+    const hash = (data: string) => createHash("sha256").update(data).digest();
     const sig = binArray.map(binVal => {
       const hashTimes = 256 - parseInt(binVal, 2);
       //console.log(hashTimes);
